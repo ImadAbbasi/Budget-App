@@ -141,9 +141,11 @@ header h1{
 .expense_container .edit{
     margin-right: 10px;
     color: var(--edit);
+    cursor: pointer;
 }
 .expense_container .trash{
     color: var(--delete);
+    cursor: pointer;
 }
 .expense_container .expense{
     align-items: center;
