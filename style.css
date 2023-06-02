@@ -13,7 +13,7 @@
 }
 
 body{
-    background: var(--mainclr);
+    background: var(--mainclr) !important;
     font-family: sans-serif;
 }
 

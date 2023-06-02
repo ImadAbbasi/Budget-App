@@ -19,15 +19,15 @@
     <section class="budget-expense">
         <div class="budget">
             <h3>Budget</h3>
-            <input type="number" id="total_amount" placeholder="Enter Total Budget">
-            <button class="btn" id="set_budget">Set budget</button>
+            <input type="number" id="total_amount" value="" placeholder="Enter Total Budget">
+            <button class="btn" id="set_budget" onclick="setBudget()">Set budget</button>
         </div>
 
         <div class="budget expenses">
             <h3>Expenses</h3>
             <input type="text" id="exp_cat" placeholder="Category">
             <input type="number" id="expense_amount" placeholder="Enter Amount">
-            <button class="btn" id="add_expense">Add Expense</button>
+            <button class="btn" id="add_expense" onclick="addExpense()">Add Expense</button>
         </div>
 
     </section>
@@ -36,15 +36,15 @@
         <div class="report">
             <div>
                 <h4>Total Budget</h4>
-                <p class="amnt">1000</p>
+                <p class="amnt" id="budgetVal">0</p>
             </div>
             <div>
                 <h4>Expenses</h4>
-                <p class="amnt">400</p>
+                <p class="amnt" id="expenseVal">0</p>
             </div>
             <div>
                 <h4>Savings</h4>
-                <p class="amnt">600</p>
+                <p class="amnt" id="saveVal">0</p>
             </div>
         </div>
     </section>
@@ -53,14 +53,17 @@
     <section class="expense_container">
         <h3 class="list">Expense List</h3>
         <hr>
-        <div class="expense_list">
-                <h4>Groceries</h4>
-                <p>200</p>
-                <div>
-                    <i class="fa-solid fa-pen-to-square edit"></i>
-                    <i class="fa-solid fa-trash-can trash"></i>
-                </div>
+        <div id="exp-sub-con">
+            <!-- <div class="expense_list">
+                    <h4>Groceries</h4>
+                    <p>200</p>
+                    <div>
+                        <i class="fa-solid fa-pen-to-square edit"></i>
+                        <i class="fa-solid fa-trash-can trash"></i>
+                    </div>
+            </div> -->
         </div>
+
     </section>
 
 
