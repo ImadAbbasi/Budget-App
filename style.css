@@ -45,6 +45,13 @@ header h1{
     background: var(--mainclr);
     box-shadow: var(--morph);
 }
+.budget h3{
+    font-size: 25px;
+    background: linear-gradient(to right, #10d7b6, #147adf);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .budget #total_amount{
     margin-top: 10px;
@@ -55,22 +62,23 @@ header h1{
     background: var(--mainclr);
     box-shadow: var(--morph-inset);
 }
-.budget #set_budget{
+.btn{
     margin-top: 30px;
     padding: 10px;
     width: 150px;
     cursor: pointer;
-    background: var(--mainclr);
-    /* color: white; */
+    background: linear-gradient(to right, #10d7b6, #147adf);
+    color: white;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     box-shadow: var(--morph);
 }
-.budget #set_budget:active{
+.btn:active{
     box-shadow: var(--morph-inset);
 }
 
-.expense input{
+.expenses input{
     background: var(--mainclr);
     margin-top: 10px;
     padding: 10px;
@@ -79,23 +87,9 @@ header h1{
     outline: none;
     box-shadow: var(--morph-inset);
 }
-.budget #add_expense{
-    margin-top: 30px;
-    padding: 10px;
-    width: 150px;
-    cursor: pointer;
-    background-color: var(--mainclr);
-    /* color: white; */
-    border: none;
-    border-radius: 5px;
-    box-shadow: var(--morph);
-}
-.budget #add_expense:active{
-    box-shadow: var(--morph-inset);
-}
 
 .report-container{
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -112,9 +106,19 @@ header h1{
     text-align: center;
     /* margin-right: 40px; */
 }
+.report h4{
+    background: linear-gradient(to right, #10d7b6, #147adf);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
+.amnt{
+    padding-top: 7px;
+}
 
 .expense_container{
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     margin-left: 205px;
     width: 870px;
     background: var(--mainclr);
@@ -123,20 +127,28 @@ header h1{
     padding: 20px
     /* margin-right: 40px; */
 }
+.expense_container h3{
+    background: linear-gradient(to right, #10d7b6, #147adf);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
 
-.expense_container .expense{
+.expense_container .expense_list{
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
 }
 .expense_container h4{
-    border-left: 4px solid black;
+    border-left: 4px solid #10d7b6;
     padding-left: 15px;
 }
 .expense_container hr{
     width: 700px;
     margin: auto;
     margin-top: 10px;
+    /* border: 1px solid #10d7b6; */
 }
 .expense_container .edit{
     margin-right: 10px;
