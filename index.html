@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/6af2eea50b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
+</head>
+<body>
+    <!-- <header>
+        <h1>Budget App</h1>
+    </header> -->
+
+    <section class="budget-expense">
+        <div class="budget">
+            <h3>Budget</h3>
+            <input type="number" id="total_amount" placeholder="Enter Total Budget">
+            <button id="set_budget">Set budget</button>
+        </div>
+
+        <div class="budget expense">
+            <h3>Expenses</h3>
+            <input type="text" id="exp_cat" placeholder="Category">
+            <input type="number" id="expense_amount" placeholder="Enter Amount">
+            <button id="add_expense">Add Expense</button>
+        </div>
+
+    </section>
+
+    <section class="report-container">
+        <div class="report">
+            <div>
+                <h4>Total Budget</h4>
+                <span>1000</span>
+            </div>
+            <div>
+                <h4>Exenses</h4>
+                <span>400</span>
+            </div>
+            <div>
+                <h4>Savings</h4>
+                <span>600</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="expense_container">
+        <h3>Expense List</h3>
+        <hr>
+        <div class="expense">
+                <h4>Groceries</h4>
+                <p>200</p>
+                <div>
+                    <i class="fa-solid fa-pen-to-square edit"></i>
+                    <i class="fa-solid fa-trash-can trash"></i>
+                </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="container">
+        <div class="amount" id="earned">
+            <h4>Money Earned</h4>
+            <div class="amount-container">
+                <p>$</p>
+                <span id="earned-amount">200</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="description" placeholder="Description">
+        <input type="number" id="amount" placeholder="Amount">
+    </div>
+    <div class="button-container">
+        <button id="add-income">Add Income</button>
+    </div> -->
+
+    <!-- <div class="amount" id="spent">
+        <h4>Money Spent</h4>
+        <div class="amount-container">
+            <p>$</p>
+            <span id="spent-amount">200</span>
+        </div>
+    </div>
+
+    <div class="amount" id="saved">
+        <h4>Money Saved</h4>
+        <div class="amount-container">
+            <p>$</p>
+            <span id="saved-amount">200</span>
+        </div>
+    </div> -->
+
+</body>
+</html>
