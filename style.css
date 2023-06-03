@@ -143,7 +143,20 @@ header h1{
 .expense_container h4{
     border-left: 4px solid #10d7b6;
     padding-left: 15px;
+    /* max-width: 110px;
+    overflow: scroll;
+    overflow-y: hidden; */
 }
+/* .expense_container h4::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+    background-color:#10d7b6;
+    border-radius: 5px;
+}
+.expense_container h4::-webkit-scrollbar-thumb{
+    background-color:#147adf;
+    border-radius: 5px;
+} */
 .expense_container hr{
     width: 700px;
     margin: auto;

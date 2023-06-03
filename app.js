@@ -2,10 +2,15 @@ let totalAmounts = [];
 let setBudget = ()=>{
     let totalBudget = document.getElementById('total_amount').value;
     let budgetVal = document.getElementById('budgetVal').innerText = totalBudget;
-    localStorage.setItem("budgetVal", budgetVal);
-    document.getElementById('total_amount').value = '';
-    // console.log(totalBudget)
+    if (!budgetVal) {
+        alert("Enter the amount.")
+    }else{
+        localStorage.setItem("budgetVal", budgetVal);
+        document.getElementById('total_amount').value = '';
+        // console.log(totalBudget)
+    }
 }
+
 
 let totalExpense = (amount)=>{
     totalAmounts.push(+amount);
@@ -17,6 +22,8 @@ let totalExpense = (amount)=>{
     localStorage.setItem("finalExpenses", finalExpenses);
 }
 
+
+
 let addExpense = ()=>{
     let category = document.getElementById('exp_cat').value;
     let amount = document.getElementById('expense_amount').value;
@@ -25,7 +32,7 @@ let addExpense = ()=>{
 
     let expSubCon = document.getElementById("exp-sub-con");
     if (!category || !amount) {
-        alert("Enter the fields")
+        alert("Please add category and amount in respective fields.")
     }else{
         const expenseItem = document.createElement("div");
         expenseItem.classList.add("expense_list");
@@ -47,8 +54,19 @@ let addExpense = ()=>{
 
         totalExpense(amount);
         totalSavings();
-    }
-}
+
+        trash.addEventListener("click", ()=>{
+            expSubCon.removeChild(expenseItem);
+            totalExpense(-amount);
+        });
+
+        // edit.addEventListener("click", ()=>{
+            
+        // });
+    };
+};
+
+
 
 let totalSavings = ()=>{
     const totalBudget = localStorage.getItem('budgetVal');
