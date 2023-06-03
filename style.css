@@ -152,12 +152,34 @@ header h1{
 }
 .expense_container .edit{
     margin-right: 10px;
-    color: var(--edit);
+    /* color: var(--edit); */
+    color: white;
     cursor: pointer;
+    border: none;
+    width: 25px;
+    height: 25px;
+    outline: none;
+    background: linear-gradient(to right, #10d7b6, #147adf);
+    box-shadow: var(--morph);
+    border-radius: 50%;
+    font-weight: 300px;
 }
 .expense_container .trash{
-    color: var(--delete);
+    /* color: var(--delete); */
+    color: white;
     cursor: pointer;
+    border: none;
+    width: 25px;
+    height: 25px;
+    outline: none;
+    background: linear-gradient(to right, #10d7b6, #147adf);
+    box-shadow: var(--morph);
+    border-radius: 50%;
+    font-weight: 300px;
+}
+.expense_container .edit:active,
+.expense_container .trash:active{
+    box-shadow: var(--morph-inset);
 }
 .expense_container .expense{
     align-items: center;

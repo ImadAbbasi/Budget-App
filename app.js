@@ -4,7 +4,7 @@ let setBudget = ()=>{
     let budgetVal = document.getElementById('budgetVal').innerText = totalBudget;
     localStorage.setItem("budgetVal", budgetVal);
     document.getElementById('total_amount').value = '';
-    console.log(totalBudget)
+    // console.log(totalBudget)
 }
 
 let totalExpense = (amount)=>{
@@ -12,7 +12,7 @@ let totalExpense = (amount)=>{
     const finalExpenses = totalAmounts.reduce((current,el)=>{
         return current + el;
     },0)
-    console.log(finalExpenses)
+    // console.log(finalExpenses)
     document.getElementById("expenseVal").innerText = finalExpenses;
     localStorage.setItem("finalExpenses", finalExpenses);
 }
@@ -20,6 +20,8 @@ let totalExpense = (amount)=>{
 let addExpense = ()=>{
     let category = document.getElementById('exp_cat').value;
     let amount = document.getElementById('expense_amount').value;
+    document.getElementById('exp_cat').value = '';
+    document.getElementById('expense_amount').value = '';
 
     let expSubCon = document.getElementById("exp-sub-con");
     if (!category || !amount) {
@@ -45,7 +47,6 @@ let addExpense = ()=>{
 
         totalExpense(amount);
         totalSavings();
-        
     }
 }
 
