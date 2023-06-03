@@ -116,6 +116,14 @@ header h1{
 .amnt{
     padding-top: 7px;
 }
+.reportInput{
+    border: none;
+    outline: none;
+    background: none;
+}
+.reportInput:hover{
+    cursor: default;
+}
 
 .expense_container{
     margin-top: 2rem;

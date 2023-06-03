@@ -37,16 +37,21 @@ let addExpense = ()=>{
         const expenseItem = document.createElement("div");
         expenseItem.classList.add("expense_list");
         expSubCon.appendChild(expenseItem);
-        const expenseItemH4 = document.createElement("h4");
-        expenseItemH4.innerText = category;
+        const expenseItemH4 = document.createElement("input");
+        expenseItemH4.classList.add("reportInput")
+        expenseItemH4.value = category;
+        expenseItemH4.setAttribute("readonly", "readonly");
         expenseItem.appendChild(expenseItemH4);
-        const expenseItemP = document.createElement("p");
-        expenseItemP.innerText = amount;
+        const expenseItemP = document.createElement("input");
+        expenseItemP.classList.add("reportInput");
+        expenseItemP.value = amount;
+        expenseItemP.setAttribute("readonly", "readonly")
         expenseItem.appendChild(expenseItemP);
         const expenseItemDiv = document.createElement("div");
         const edit = document.createElement("button");
         const trash = document.createElement("button");
-        edit.classList.add("fa-solid", "fa-pen-to-square", "edit");
+        edit.classList.add("edit");
+        edit.innerText = "Edit"
         trash.classList.add("fa-solid", "fa-trash-can", "trash");
         expenseItemDiv.appendChild(edit);
         expenseItemDiv.appendChild(trash);
@@ -60,9 +65,19 @@ let addExpense = ()=>{
             totalExpense(-amount);
         });
 
-        // edit.addEventListener("click", ()=>{
-            
-        // });
+        edit.addEventListener("click", ()=>{
+            if (edit.innerText.toLowerCase() == "edit") {
+                expenseItemH4.removeAttribute("readonly");
+                expenseItemH4.focus();
+                expenseItemP.removeAttribute("readonly");
+                expenseItemP.focus();
+                edit.innerText = "Save";
+              } else {
+                expenseItemH4.setAttribute("readonly", "readonly");
+                expenseItemP.setAttribute("readonly", "readonly");
+                edit.innerText = "Edit";
+              }
+        });
     };
 };
 
