@@ -80,6 +80,27 @@ let addExpense = ()=>{
         });
     };
 };
+
+
+        trash.addEventListener("click", ()=>{
+            expSubCon.removeChild(expenseItem);
+            totalExpense(-amount);
+        });
+
+        edit.addEventListener("click", ()=>{
+            if (edit.innerText.toLowerCase() == "edit") {
+                expenseItemH4.removeAttribute("readonly");
+                expenseItemH4.focus();
+                expenseItemP.removeAttribute("readonly");
+                expenseItemP.focus();
+                edit.innerText = "Save";
+              } else {
+                expenseItemH4.setAttribute("readonly", "readonly");
+                expenseItemP.setAttribute("readonly", "readonly");
+                edit.innerText = "Edit";
+              }
+        });
+
     if (!budgetVal) {
          document.getElementById("saveVal").innerText = "";
     }else{
