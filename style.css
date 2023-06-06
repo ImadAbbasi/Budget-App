@@ -124,6 +124,9 @@ header h1{
 .reportInput:hover{
     cursor: default;
 }
+.reportInput:focus{
+    box-shadow: var(--morph-inset);
+}
 
 .expense_container{
     margin-top: 2rem;
@@ -177,7 +180,7 @@ header h1{
     color: white;
     cursor: pointer;
     border: none;
-    width: 25px;
+    width: 35px;
     height: 25px;
     outline: none;
     background: linear-gradient(to right, #10d7b6, #147adf);

@@ -101,15 +101,13 @@ let addExpense = ()=>{
               }
         });
 
-    // if (!budgetVal) {
-    //      document.getElementById("saveVal").innerText = "";
-    // }else{
-    //     function totalSavings() {
-    //         const totalBudget = localStorage.getItem('budgetVal');
-    //         const expenses = localStorage.getItem('finalExpenses');
-    //         const savings = totalBudget - expenses;
-    //         document.getElementById("saveVal").innerText = savings;
-    //     };
-// };
+    
+        function totalSavings() {
+            const totalBudget = localStorage.getItem('budgetVal');
+            const expenses = localStorage.getItem('finalExpenses');
+            const savings = totalBudget - expenses;
+            document.getElementById("saveVal").innerText = savings;
+        };
+
 
 
